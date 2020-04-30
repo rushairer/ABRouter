@@ -8,6 +8,6 @@
 
 @import UIKit;
 
-@interface ABROUTERViewController : UIViewController
+@interface ABROUTERViewController : UITableViewController
 
 @end

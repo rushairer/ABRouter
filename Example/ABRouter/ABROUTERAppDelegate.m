@@ -7,12 +7,31 @@
 //
 
 #import "ABROUTERAppDelegate.h"
+#import <ABRouter/ABRouter.h>
 
 @implementation ABROUTERAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    __weak __typeof(self) weakSelf = self;
+
+    [[ABRouter sharedInstance] registerAction:@"view1"
+                        withCompletionHandler:^(NSDictionary * _Nonnull userInfo) {
+        UIViewController *view1 = [[UIViewController alloc] init];
+        view1.view.backgroundColor = [UIColor redColor];
+        [(UINavigationController *)weakSelf.window.rootViewController pushViewController:view1
+                                                                            animated:YES];
+    }];
+    
+    [[ABRouter sharedInstance] registerAction:@"view2"
+                        withCompletionHandler:^(NSDictionary * _Nonnull userInfo) {
+        UIViewController *view2 = [[UIViewController alloc] init];
+        view2.view.backgroundColor = [UIColor blueColor];
+        [(UINavigationController *)weakSelf.window.rootViewController pushViewController:view2
+                                                                            animated:YES];
+    }];
+    
     return YES;
 }
 

@@ -1,0 +1,16 @@
+PODS:
+  - ABRouter (0.1.0)
+
+DEPENDENCIES:
+  - ABRouter (from `../`)
+
+EXTERNAL SOURCES:
+  ABRouter:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  ABRouter: 16c0989960973859ba76738a4b1c868d315fd272
+
+PODFILE CHECKSUM: 0ab3c3a98576da0bf4251b6955899d5e7d084eaf
+
+COCOAPODS: 1.9.1
